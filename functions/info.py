@@ -30,16 +30,17 @@ class AnimeInfo:
     def __init__(self, name):
         self.kitsu = RawAnimeInfo()
         self.CAPTION = """
-⛩️ • {} • ⛩
+🔮 • {} • 🔮
+╭────────────────────
+⌲ 𝖳𝗒𝗉𝖾   : TV
+❦︎ 𝖲𝖾𝖺𝗌𝗈𝗇 : `{}`
+❍ 𝖤𝗉𝗂𝗌𝗈𝖽𝖾 : `{}`
+❐ 𝖲𝗍𝖺𝗍𝗎𝗌  : `{}`
+〄 𝖠𝗎𝖽𝗂𝗈  : Japanese (Sub)
+♡ 𝖦𝖾𝗇𝗋𝖾𝗌  : `{}`
+╰────────────────────
 ╭─━━━━━━━━─━━━━━━━━─╮
-⌬ Seasons: `{}` 
-⌬ Episode: `{}`
-⌬ 𝘚𝘵𝘢𝘵𝘶𝘴: `Ongoing`
-⌬ Audio: `Japanese (Subtitled)` 
-⌬ Quality: `480p, 720p, 1080p`
-╰─━━━━━━━━─━━━━━━━━─╯
-╭─━━━━━━━━─━━━━━━━━─╮
-‣  ᴘᴏᴡᴇʀᴇᴅ ʙʏ ~ @Anime_Compass 🧭
+‣   [© 𝖯𝗂𝗋𝖺𝗍𝖾 𝖥𝗅𝗂𝖼𝗄𝗌](t.me/pirate_flicks)
 ╰─━━━━━━━━─━━━━━━━━─╯
 """
         self.proper_name = self.get_proper_name_for_func(name)
@@ -104,14 +105,14 @@ class AnimeInfo:
             anime_name = self.data.get("anime_title")
             if anime_name and self.data.get("episode_number"):
                 return (
-                    f"[AC🧭][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Anime_Compass.mkv".replace(                        "‘", ""
+                    f"**[PF][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks.mkv**".replace(                        "‘", ""
                     )
                     .replace("’", "")
                     .strip()
                 )
             if anime_name:
                 return (
-                    f"[AC🧭][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Anime_Compass.mkv".replace(
+                    f"**[PF][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks**.mkv".replace(
                         "‘", ""
                     )
                     .replace("’", "")

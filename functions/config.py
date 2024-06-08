@@ -22,13 +22,13 @@ from decouple import config
 class Var:
     # Telegram Credentials
 
-    API_ID = config("API_ID", default=21310924, cast=int)
-    API_HASH = config("API_HASH", default="fa4c3f582286d969ab1d08449e9533e8")
-    BOT_TOKEN = config("BOT_TOKEN", default="6830131735:AAFelIqb0CFQjdluupFfpXXpvPSs-HcF9w0")
-    FORCESUB_CHANNEL = int("-1001926897432")
-    FORCESUB_CHANNEL_2 = int("-1002066884253")
-    FORCESUB_CHANNEL_LINK = "https://t.me/Anime_Compass"
-    FORCESUB_CHANNEL_LINK_2 = "https://t.me/Ongoing_Compass"
+    API_ID = config("API_ID", default=29922662, cast=int)
+    API_HASH = config("API_HASH", default="fabd9f89368de7cc31357522a0089a56")
+    BOT_TOKEN = config("BOT_TOKEN", "6672385958:AAESlGvQv7szlROFnXyT0zigg0pwZXE5jCE")
+    FORCESUB_CHANNEL = int("-1002160935563")
+    FORCESUB_CHANNEL_2 = int("-1002180087052")
+    FORCESUB_CHANNEL_LINK = "https://t.me/pirate_flicks"
+    FORCESUB_CHANNEL_LINK_2 = "https://t.me/cv_official_channel"
     # Database Credentials
 
     REDIS_URI = config("REDIS_URI", default="redis-10802.c330.asia-south1-1.gce.redns.redis-cloud.com:10802") 
@@ -36,16 +36,16 @@ class Var:
 
     # Channels Ids
 
-    BACKUP_CHANNEL = config("BACKUP_CHANNEL", default=-1002106668069, cast=int)
-    MAIN_CHANNEL = config("MAIN_CHANNEL", default="-1002066884253", cast=int)
-    LOG_CHANNEL = config("LOG_CHANNEL", default="-1002065149795", cast=int)
-    CLOUD_CHANNEL = config("CLOUD_CHANNEL", default="-1002065149795", cast=int)
-    OWNER = config("OWNER", default="6072442458", cast=int)
+    BACKUP_CHANNEL = config("BACKUP_CHANNEL", default=-1002198961306, cast=int)
+    MAIN_CHANNEL = config("MAIN_CHANNEL", default="-1002160695715", cast=int)
+    LOG_CHANNEL = config("LOG_CHANNEL", default="-1001836315219", cast=int)
+    CLOUD_CHANNEL = config("CLOUD_CHANNEL", default="-1002238472168", cast=int)
+    OWNER = config("OWNER", default="6047510747", cast=int)
     BUTTON_UPLOAD = True 
     # Other Configs 
 
     THUMB = config(
-        "THUMBNAIL", default="https://graph.org/file/4fa004087303b32a4f07d.jpg"
+        "THUMBNAIL", default="https://telegra.ph/file/f2ed939fa595810b6c08a.jpg"
     )
     FFMPEG = config("FFMPEG", default="ffmpeg")
     CRF = config("CRF", default="27")

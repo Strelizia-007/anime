@@ -16,7 +16,7 @@
 # if you are using this following code then don't forgot to give proper
 # credit to t.me/kAiF_00z (github.com/kaif-00z)
 
-import re
+import re, random
 from datetime import datetime
 
 import anitopy
@@ -25,12 +25,13 @@ import pytz
 from libs.kitsu import RawAnimeInfo
 from libs.logger import LOGS
 
-genre=random.choice(GEN)
 GEN = ["Action, Comedy, Romance,",
        "Adventure, Fantasy, Romance,",
        "Action, Adventure, Fantasy, Romance",
        "Adventure, Fantasy, Slice_of_Life",
        "Drama, Romance, Slice_of_Life,"]
+
+genre=random.choice(GEN)
 
 class AnimeInfo:
     def __init__(self, name):

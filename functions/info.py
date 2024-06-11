@@ -25,6 +25,7 @@ import pytz
 from libs.kitsu import RawAnimeInfo
 from libs.logger import LOGS
 
+genre = 
 
 class AnimeInfo:
     def __init__(self, name):
@@ -37,7 +38,7 @@ class AnimeInfo:
 ❍ 𝖤𝗉𝗂𝗌𝗈𝖽𝖾 : `{}`
 ❐ 𝖲𝗍𝖺𝗍𝗎𝗌  : `{}`
 〄 𝖠𝗎𝖽𝗂𝗈  : Japanese (Sub)
-♡ 𝖦𝖾𝗇𝗋𝖾𝗌  : `{}`
+♡ 𝖦𝖾𝗇𝗋𝖾𝗌  : random.choice("genre")
 ╰────────────────────
 ╭─━━━━━━━━─━━━━━━━━─╮
 ‣  ‎‎  ‎ ‎  [© 𝖯𝗂𝗋𝖺𝗍𝖾 𝖥𝗅𝗂𝖼𝗄𝗌](t.me/pirate_flicks)
@@ -105,14 +106,14 @@ class AnimeInfo:
             anime_name = self.data.get("anime_title")
             if anime_name and self.data.get("episode_number"):
                 return (
-                    f"**[PF][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks.mkv**".replace(                        "‘", ""
+                    f"<b>[PF] [S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks.mkv</b>".replace(                        "‘", ""
                     )
                     .replace("’", "")
                     .strip()
                 )
             if anime_name:
                 return (
-                    f"**[PF][S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks**.mkv".replace(
+                    f"[PF] [S{self.data.get('anime_season') or 1}-{self.data.get('episode_number') or ''}] {(await self.get_english())} [{self.data.get('video_resolution') or ''}] @Pirate_Flicks.mkv".replace(
                         "‘", ""
                     )
                     .replace("’", "")

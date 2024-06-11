@@ -25,25 +25,17 @@ import pytz
 from libs.kitsu import RawAnimeInfo
 from libs.logger import LOGS
 
-genre = 
+genre=random.choice(GEN)
+GEN = ["Action, Comedy, Romance,",
+       "Adventure, Fantasy, Romance,",
+       "Action, Adventure, Fantasy, Romance",
+       "Adventure, Fantasy, Slice_of_Life",
+       "Drama, Romance, Slice_of_Life,"]
 
 class AnimeInfo:
     def __init__(self, name):
         self.kitsu = RawAnimeInfo()
-        self.CAPTION = """
-🔮 • {} • 🔮
-╭────────────────────
-⌲ 𝖳𝗒𝗉𝖾   : TV
-❦︎ 𝖲𝖾𝖺𝗌𝗈𝗇 : `{}`
-❍ 𝖤𝗉𝗂𝗌𝗈𝖽𝖾 : `{}`
-❐ 𝖲𝗍𝖺𝗍𝗎𝗌  : `{}`
-〄 𝖠𝗎𝖽𝗂𝗈  : Japanese (Sub)
-♡ 𝖦𝖾𝗇𝗋𝖾𝗌  : random.choice("genre")
-╰────────────────────
-╭─━━━━━━━━─━━━━━━━━─╮
-‣  ‎‎  ‎ ‎  [© 𝖯𝗂𝗋𝖺𝗍𝖾 𝖥𝗅𝗂𝖼𝗄𝗌](t.me/pirate_flicks)
-╰─━━━━━━━━─━━━━━━━━─╯
-"""
+        self.CAPTION = f"🔮 • {} • 🔮\n╭────────────────────\n⌲ 𝖳𝗒𝗉𝖾   : TV\n❦︎ 𝖲𝖾𝖺𝗌𝗈𝗇 : `{}`\n❍ 𝖤𝗉𝗂𝗌𝗈𝖽𝖾 : `{}`\n❐ 𝖲𝗍𝖺𝗍𝗎𝗌  : `{}`\n〄 𝖠𝗎𝖽𝗂𝗈  : Japanese (Sub)\n♡ 𝖦𝖾𝗇𝗋𝖾𝗌  : {genre} \n╰────────────────────\n╭─━━━━━━━━─━━━━━━━━─╮\n‣  ‎‎  ‎ ‎  [© 𝖯𝗂𝗋𝖺𝗍𝖾 𝖥𝗅𝗂𝖼𝗄𝗌](t.me/pirate_flicks)\n╰─━━━━━━━━─━━━━━━━━─╯"
         self.proper_name = self.get_proper_name_for_func(name)
         self.name = name
         self.data = anitopy.parse(name)

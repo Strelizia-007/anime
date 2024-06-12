@@ -45,7 +45,7 @@ class ScheduleTasks:
             )
             xx = json.loads(_res)
             xxx = xx["schedule"]
-            text = "**📆 Anime AirTime Today** `[IST]`\n\n"
+            text = "**📆 Today's Anime Release Schedule** `[IST]`\n\n"
             for i in xxx:
                 info = AnimeInfo(i["title"])
                 text += f'`[{i["time"]}]` -  [{(await info.get_english())}](https://subsplease.org/shows/{i["page"]})\n'

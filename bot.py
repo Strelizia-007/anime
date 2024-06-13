@@ -57,24 +57,24 @@ async def _start(event):
         message = "**Please Join the Following Channels to Use This Bot:**\n"
         buttons = []
         if not is_user_joined:
-            message += f"- [Anime Compass]({Var.FORCESUB_CHANNEL_LINK})\n"
+            message += f"- [Pirate Flicks]({Var.FORCESUB_CHANNEL_LINK})\n"
             buttons.append(
                 Button.url(
-                    "Join Channel",
-                    url=f"https://t.me/Anime_Compass",
+                    "• ᴊᴏɪɴ",
+                    url=f"https://t.me/pirate_flicks",
                 )
             )
         if not is_user_joined_2:
-            message += f"- [Ongoing Compass]({Var.FORCESUB_CHANNEL_LINK_2})\n"
+            message += f"- [Pirate_Flicks]({Var.FORCESUB_CHANNEL_LINK_2})\n"
             buttons.append(
                 Button.url(
-                    "Join Channel",
-                    url=f"https://t.me/Ongoing_Compass",
+                    "ᴊᴏɪɴ •",
+                    url=f"https://t.me/cv_Official_channel",
                 )
             )
         buttons.append(
             Button.url(
-                "♻️ REFRESH",
+                "ʀᴇꜰʀᴇꜱʜ ↻",
                 url=f"https://t.me/{((await bot.get_me()).username)}?start={msg_id}",
             )
         )
@@ -101,13 +101,13 @@ async def _start(event):
                 buttons=admin.admin_panel(),
             )
         await event.reply(
-            f"**Enjoy Ongoing Anime's Best Encode 24/7 🫡**",
+            f"**Hey {message.from.user.mention},\nI am Auto Animes Store & Automater Encoder Build with ❤️ !!**",
             buttons=[
                 [
-                    Button.url("👨‍💻 DEV", url="t.me/Mr_Bankaiiii"),
+                    Button.url("🔮 ᴜᴩᴅᴀᴛᴇꜱ", url="t.me/cv_official_channel"),
                     Button.url(
-                        "💖 Main Channel",
-                        url="T.me/Anime_Compass",
+                        "ꜱᴜᴩᴩᴏʀᴛ 🔮",
+                        url="T.me/pirate_flicks",
                     ),
                 ]
             ],

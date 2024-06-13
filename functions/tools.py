@@ -143,7 +143,7 @@ class Tools:
         return True, out
 
     async def compress(self, dl, out):
-        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata:s:v:0 title="[Pirate Flicks] : (This Episode)" -metadata:s:a:0 title="[Telegram: @Pirate_Flicks]" -metadata:s:a:1 title="[Telegram: @Pirate_Flicks]" -map 0:v? -map 0:a? -map 0:s? -map 0:t? -metadata title="@Pirate_Flicks" -metadata author="@Pirate_Flicks" -metadata:s:s title="@Pirate_Flicks" -metadata:s:a title="@Pirate_Flicks" -metadata:s:v title="@pirate_Flicks" -c:v libx265 -preset ultrafast -crf 27 -c:a libopus -ac 2 -vbr 2 -ab 64k -c:s copy -movflags +faststart -vf "drawtext=fontfile=Imprima_Love.ttf:fontsize=25:fontcolor=white:bordercolor=black@0.50:x=w-tw-10:y=10:text=© Pirate Flicks" """{out}""" -y'''
+        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata:s:v:0 title="[Pirate Flicks] : (This Episode)" -metadata:s:a:0 title="[Telegram: @Pirate_Flicks]" -metadata:s:a:1 title="[Telegram: @Pirate_Flicks]" -map 0:v? -map 0:a? -map 0:s? -map 0:t? -metadata title="@Pirate_Flicks" -metadata author="@Pirate_Flicks" -metadata:s:s title="@Pirate_Flicks" -metadata:s:a title="@Pirate_Flicks" -metadata:s:v title="@pirate_Flicks" -c:v libx265 -preset ultrafast -crf 27 -c:a libopus -ac 2 -vbr 2 -ab 64k -c:s copy -movflags +faststart -vf "drawtext=fontfile=Imprima_Love.ttf:fontsize=20:fontcolor=white:bordercolor=black@0.50:x=w-tw-10:y=10:text=© Pirate Flicks" """{out}""" -y'''
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )

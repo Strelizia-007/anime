@@ -20,7 +20,7 @@ import re
 from traceback import format_exc
 
 from telethon import Button, events
-pyrogram.utils.MIN_CHANNEL_ID = -1002198961306
+pyrogram.utils.BACKUP_CHANNEL = -1002198961306
 from core.bot import Bot
 from core.executors import Executors
 from database import DataBase

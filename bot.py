@@ -101,7 +101,7 @@ async def _start(event):
                 buttons=admin.admin_panel(),
             )
         await event.reply(
-            f"**Hey {message.from.user.mention},\nI am Auto Animes Store & Automater Encoder Build with ❤️ !!**",
+            f"**Hey {message.from.user.mention},\nI am Auto Animes Store & Automater Encoder Build with ❤️ !!**"
             buttons=[
                 [
                     Button.url("🔮 ᴜᴩᴅᴀᴛᴇꜱ", url="t.me/cv_official_channel"),
